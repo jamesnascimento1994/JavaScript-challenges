@@ -45,3 +45,17 @@ Challenge Source: https://edabit.com/challenge/vvuAkYEAArrZvmp6X
 // console.log(bitwiseAND(7, 12));
 // console.log(bitwiseOR(7, 12));
 // console.log(bitwiseXOR(7, 12));
+
+/*
+Challenge Four: Write a function that takes the base and height of a triangle and return its area.
+Challenge Source: https://edabit.com/challenge/3CaszbdZYGN4otQD8
+*/
+
+// function triArea(base, height) {
+//     return (base * height) / 2;
+// }
+
+// // TESTS
+// console.log(triArea(5, 4));
+// console.log(triArea(6, 7));
+// console.log(triArea(3, 2));

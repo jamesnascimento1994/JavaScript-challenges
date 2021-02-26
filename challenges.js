@@ -59,3 +59,18 @@ Challenge Source: https://edabit.com/challenge/3CaszbdZYGN4otQD8
 // console.log(triArea(5, 4));
 // console.log(triArea(6, 7));
 // console.log(triArea(3, 2));
+
+/*
+Challenge Five: Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
+Challenge Source: https://edabit.com/challenge/nhXofMMyrowMyr9Nv
+*/
+
+// function nextEdge(side1, side2) {
+//     let side3 = (side1 + side2) - 1;
+//     return side3;
+// }
+
+// // TESTS
+// console.log(nextEdge(10, 6));
+// console.log(nextEdge(8, 9));
+// console.log(nextEdge(3,7));

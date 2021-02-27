@@ -74,3 +74,17 @@ Challenge Source: https://edabit.com/challenge/nhXofMMyrowMyr9Nv
 // console.log(nextEdge(10, 6));
 // console.log(nextEdge(8, 9));
 // console.log(nextEdge(3,7));
+
+/*
+Challenge Six: Create a function that takes an array containing only numbers and return the first element.
+Challenge Source: https://edabit.com/challenge/QaApgtePE6QrCZ64o
+*/
+
+// function getFirstValue(arr) {
+//     return arr[0];
+// }
+
+// // TESTS
+// console.log(getFirstValue([1, 2, 3]));
+// console.log(getFirstValue([80, 5, 100]));
+// console.log(getFirstValue([-500, 0, 50]));

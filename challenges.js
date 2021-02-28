@@ -88,3 +88,21 @@ Challenge Source: https://edabit.com/challenge/QaApgtePE6QrCZ64o
 // console.log(getFirstValue([1, 2, 3]));
 // console.log(getFirstValue([80, 5, 100]));
 // console.log(getFirstValue([-500, 0, 50]));
+
+/* 
+Challenge Seven: Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+Challenge Source: https://edabit.com/challenge/PTiLYyb4A69KZtBCg
+*/
+
+// function lessThanOrEqualToZero(num) {
+//     if (num <= 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// // TESTS
+// console.log(lessThanOrEqualToZero(5));
+// console.log(lessThanOrEqualToZero(0));
+// console.log(lessThanOrEqualToZero(-2));

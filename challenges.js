@@ -106,3 +106,18 @@ Challenge Source: https://edabit.com/challenge/PTiLYyb4A69KZtBCg
 // console.log(lessThanOrEqualToZero(5));
 // console.log(lessThanOrEqualToZero(0));
 // console.log(lessThanOrEqualToZero(-2));
+
+/*
+Challenge Eight: Write a function that converts hours into seconds.
+Challenge Source: https://edabit.com/challenge/6AnQqiEjkJdZrWhPS
+*/
+
+// function howManySeconds(hours) {
+//     let seconds = hours * 3600;
+//     return seconds;
+// }
+
+// // TESTS
+// console.log(howManySeconds(2));
+// console.log(howManySeconds(10));
+// console.log(howManySeconds(24));

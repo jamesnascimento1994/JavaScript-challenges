@@ -155,3 +155,17 @@ Challenge Source: https://edabit.com/challenge/ks3vMrqdnW3CQ3F4i
 // console.log(squared(5));
 // console.log(squared(9));
 // console.log(squared(100));
+
+/*
+Challenge Eleven: Create a function that takes length and width and finds the perimeter of a rectangle.
+Challenge Source: https://edabit.com/challenge/XnJ24rWW7iJkNrtsh
+*/
+
+// function findPerimeter(length, width) {
+//     return (length + width) * 2;
+// }
+
+// // TESTS
+// console.log(findPerimeter(6, 7));
+// console.log(findPerimeter(20, 10));
+// console.log(findPerimeter(2, 9));

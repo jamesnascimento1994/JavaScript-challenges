@@ -121,3 +121,17 @@ Challenge Source: https://edabit.com/challenge/6AnQqiEjkJdZrWhPS
 // console.log(howManySeconds(2));
 // console.log(howManySeconds(10));
 // console.log(howManySeconds(24));
+
+/* 
+Challenge Nine: Write a function that takes an integer minutes and converts it to seconds.
+Challenge Source: https://edabit.com/challenge/8q54MKnRrm89pSLmW
+*/
+
+// function convert(minutes) {
+//     return minutes * 60;
+// }
+
+// // TESTS
+// console.log(convert(5));
+// console.log(convert(3));
+// console.log(convert(2));

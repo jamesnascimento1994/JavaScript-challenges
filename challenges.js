@@ -135,3 +135,23 @@ Challenge Source: https://edabit.com/challenge/8q54MKnRrm89pSLmW
 // console.log(convert(5));
 // console.log(convert(3));
 // console.log(convert(2));
+
+/* 
+Challenge Ten: Fix the code in the code tab to pass this challenge (only syntax errors). Look at the examples below to get an idea of what the function should do.
+Challenge Source: https://edabit.com/challenge/ks3vMrqdnW3CQ3F4i
+*/
+
+// Starter Code
+// function squared(b) {
+//     return a * a;
+// }
+
+// Solution
+// function squared(b) {
+//     return b = b * b;
+// }
+
+// TESTS
+// console.log(squared(5));
+// console.log(squared(9));
+// console.log(squared(100));

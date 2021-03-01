@@ -169,3 +169,17 @@ Challenge Source: https://edabit.com/challenge/XnJ24rWW7iJkNrtsh
 // console.log(findPerimeter(6, 7));
 // console.log(findPerimeter(20, 10));
 // console.log(findPerimeter(2, 9));
+
+/* 
+Challenge Twelve: Create a function that takes the age and return the age in days.
+Challenge Source: https://edabit.com/challenge/bL7hSc6Zh4zZJzGmw
+*/
+
+// function calcAge(age) {
+//     return age * 365;
+// }
+
+// // TESTS
+// console.log(calcAge(65));
+// console.log(calcAge(0));
+// console.log(calcAge(20));

@@ -203,3 +203,17 @@ Challenge Source: https://edabit.com/challenge/j7yQbF3J3rToHsDBP
 // console.log(cubes(3));
 // console.log(cubes(5));
 // console.log(cubes(10));
+
+/*
+Challenge Fourteen: Create a regular expression to match all red flag and blue flag in a string. You must use | in your expression. Flags can come in any order.
+Challenge Source: https://edabit.com/challenge/7KbZc8QvzqrJPaE6Q 
+*/
+
+// const REGEXP = /blue flag |red flag/g;
+
+// // TESTS
+// console.log('red flag blue flag'.match(REGEXP));
+// console.log('yellow flag red flag blue flag green flag'.match(REGEXP));
+// console.log(
+// 	'pink flag red flag black flag blue flag green flag red flag '.match(REGEXP)
+// );

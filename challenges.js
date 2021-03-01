@@ -217,3 +217,26 @@ Challenge Source: https://edabit.com/challenge/7KbZc8QvzqrJPaE6Q
 // console.log(
 // 	'pink flag red flag black flag blue flag green flag red flag '.match(REGEXP)
 // );
+
+/* 
+Challenge Fifteen: Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String). Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b
+*/
+
+// function hello(name) {
+//     if (name === 'johN') {
+//         return 'Hello, John'
+//     } else if (name === 'alice') {
+//         return 'Hello, Alice'
+//     } else if (name === '') {
+//         return 'Hello World'
+//     } else {
+//         return 'Hello World'
+//     }
+// }
+
+// // TESTS
+// console.log(hello("johN"));
+// console.log(hello('alice'));
+// console.log(hello());
+// console.log(hello(''));

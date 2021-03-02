@@ -295,3 +295,19 @@ Challenge Source: https://www.codewars.com/kata/5412509bd436bd33920011bc/javascr
 // // TESTS
 // console.log(maskify("Skippy"));
 // console.log(maskify('Nananananananana Batman!'));
+
+/* 
+Challenge Eighteen: Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+Challenge Source: https://www.codewars.com/kata/5467e4d82edf8bbf40000155/javascript
+*/
+
+// function descendingOrder(n) {
+// 	return (
+// 		parseFloat(n.toString().split('').sort().reverse().join('')) * Math.sign(n)
+// 	);
+// }
+
+// // TESTS
+// console.log(descendingOrder(42145));
+// console.log(descendingOrder(145263));
+// console.log(descendingOrder(123456789));

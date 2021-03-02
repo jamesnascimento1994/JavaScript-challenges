@@ -220,7 +220,7 @@ Challenge Source: https://edabit.com/challenge/7KbZc8QvzqrJPaE6Q
 
 /* 
 Challenge Fifteen: Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String). Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
-Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b
+Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b/javascript
 */
 
 // function hello(name) {
@@ -240,3 +240,29 @@ Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b
 // console.log(hello('alice'));
 // console.log(hello());
 // console.log(hello(''));
+
+/* 
+Challenge Sixteen: When it's spring Japanese cherries blossom, it's called "sakura" and it's admired a lot. The petals start to fall in late April. Suppose that the falling speed of a petal is 5 centimeters per second (5 cm/s), and it takes 80 seconds for the petal to reach the ground from a certain branch. Write a function that receives the speed (in cm/s) of a petal as input, and returns the time it takes for that petal to reach the ground from the same branch.
+Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/javascript
+*/
+
+// function sakuraFall(v) {
+// 	// equate the speed to the velocity
+// 	let speed = v;
+// 	// distance fell = falling speed * how many seconds it takes for pedal to reach ground
+// 	// In the sample tests 5 * 80, 10 * 4, = 400
+// 	let distanceFell = 400;
+// 	// write an if statement to check if the initial velocity is positive or negative
+// 	// we want the return value to be 0 if the initial velocity is negative
+// 	if (speed > 0) {
+// 		let howManySeconds = distanceFell / speed;
+// 		return howManySeconds;
+// 	} else {
+// 		return 0;
+// 	}
+// }
+
+// // TESTS
+// console.log(sakuraFall(5));
+// console.log(sakuraFall(8));
+// console.log(sakuraFall(-7));

@@ -311,3 +311,16 @@ Challenge Source: https://www.codewars.com/kata/5467e4d82edf8bbf40000155/javascr
 // console.log(descendingOrder(42145));
 // console.log(descendingOrder(145263));
 // console.log(descendingOrder(123456789));
+
+/* 
+Challenge Nineteen: In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+Challenge Source: https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/javascript
+*/
+
+// function filter_list(l) {
+// 	return l.filter((element) => typeof element === 'number');
+// }
+
+// console.log(filter_list([1, 2, 'a', 'b']));
+// console.log(filter_list([1, 'a', 'b', 0, 15]));
+// console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));

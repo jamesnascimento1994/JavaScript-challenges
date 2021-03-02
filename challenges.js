@@ -355,3 +355,26 @@ Challenge Source: https://www.codewars.com/kata/551dc350bf4e526099000ae5/javascr
 // console.log(songDecoder('WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB'));
 // console.log(songDecoder("WUBFORGIVEWUBMEWUBFATHERWUB"));
 // console.log(songDecoder("WUBJESSEWUBBADWUBBOYWUBJUSTWUBCOMEWUBLOOKWUBATWUBWHATWUBYOURWUBBROTHERWUBDIDWUB"));
+
+/* 
+Challenge Twenty-Two: Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+Challenge Source: https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/javascript
+*/
+
+// function duplicateCount(text) {
+// 	try {
+// 		return text
+// 			.toLowerCase()
+// 			.split('')
+// 			.sort()
+// 			.join('')
+// 			.match(/(.)\1+/g).length;
+// 	} catch (e) {
+// 		return 0;
+// 	}
+// }
+
+// // TESTS
+// console.log(duplicateCount('text'));
+// console.log(duplicateCount('indivisibility'));
+// console.log(duplicateCount('Woodpecker'));

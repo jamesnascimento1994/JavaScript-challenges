@@ -324,3 +324,17 @@ Challenge Source: https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/javascr
 // console.log(filter_list([1, 2, 'a', 'b']));
 // console.log(filter_list([1, 'a', 'b', 0, 15]));
 // console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+
+/* 
+Challenge Twenty: Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y). The input string will only consist of lower case letters and/or spaces.
+Challenge Source: https://www.codewars.com/kata/54ff3102c1bad923760001f3/javascript
+*/
+
+// function getCount(str) {
+// 	return str.replace(/[^aeiou]/gi, '').length;
+// }
+
+// // TESTS
+// console.log(getCount("vowel"));
+// console.log(getCount('cover'));
+// console.log(getCount('cranium'));

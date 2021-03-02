@@ -266,3 +266,32 @@ Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/javascr
 // console.log(sakuraFall(5));
 // console.log(sakuraFall(8));
 // console.log(sakuraFall(-7));
+
+/* 
+Challenge Seventeen: Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it. Your task is to write a function maskify, which changes all but the last four characters into '#'.
+Challenge Source: https://www.codewars.com/kata/5412509bd436bd33920011bc/javascript
+*/
+
+// function maskify(cc) {
+//   if (cc.length > 4) {
+//     let reversedCC = reverse(cc);
+//     let newString = '';
+//     for (let i = 0; i < reversedCC.length; i++) {
+//       if (i < 4) {
+//         newString += reversedCC[i];
+//       } else {
+//         newString += '#';
+//       }
+//     }
+//     return reverse(newString);
+//   } else {
+//     return cc;
+//   }
+//   }
+//   function reverse(str) {
+//     return str.split("").reverse().join("");
+// }
+
+// // TESTS
+// console.log(maskify("Skippy"));
+// console.log(maskify('Nananananananana Batman!'));

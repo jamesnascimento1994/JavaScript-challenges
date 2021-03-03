@@ -418,3 +418,23 @@ Challenge Source: https://www.codewars.com/kata/54b724efac3d5402db00065e/javascr
 // // TESTS
 // console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
 // console.log(decodeMorse('-.-- -.-- --..'));
+
+/* 
+Challenge Twenty-Four: This code does not execute properly. Try to figure out why.
+Challenge Source: https://www.codewars.com/kata/50654ddff44f800200000004/javascript
+*/
+
+// Starter Code
+// function multiply(a, b) {
+//     a * b;
+// }
+
+// Solution
+// function multiply(a, b) {
+//     return a * b;
+// }
+
+// // TESTS
+// console.log(multiply(5,4));
+// console.log(multiply(8,6));
+// console.log(multiply(9, 7));

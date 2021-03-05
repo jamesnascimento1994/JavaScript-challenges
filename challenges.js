@@ -224,15 +224,16 @@ Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b/javascr
 */
 
 // function hello(name) {
-//     if (name === 'johN') {
-//         return 'Hello, John'
-//     } else if (name === 'alice') {
-//         return 'Hello, Alice'
-//     } else if (name === '') {
-//         return 'Hello World'
-//     } else {
-//         return 'Hello World'
-//     }
+// 	if (name) {
+// 		return (
+// 			'Hello, ' +
+// 			name.substring(0, 1).toUpperCase() +
+// 			name.substring(1).toLowerCase() +
+// 			'!'
+// 		);
+// 	} else {
+// 		return 'Hello, World!';
+// 	}
 // }
 
 // // TESTS

@@ -218,7 +218,7 @@ Challenge Source: https://edabit.com/challenge/7KbZc8QvzqrJPaE6Q
 // 	'pink flag red flag black flag blue flag green flag red flag '.match(REGEXP)
 // );
 
-/* 
+/*
 Challenge Fifteen: Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String). Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
 Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b/javascript
 */
@@ -453,3 +453,26 @@ Challenge Source: https://www.codewars.com/kata/52fba66badcd10859f00097e/javascr
 // console.log(disemvowel("This website is for losers LOL"));
 // console.log(disemvowel("Trolling on"));
 // console.log(disemvowel("Now are you for real?"));
+
+/* 
+Challenge Twenty-Six: Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+Challenge Source: https://www.codewars.com/kata/520b9d2ad5c005041100000f/javascript
+*/
+
+// function pigIt(str) {
+// 	// split the string into words
+// 	let words = str.split(' ');
+// 	// map over the words and
+// 	let pigLatinWords = words.map(function (word) {
+// 		if (!/\w/.test(word)) return word; // ignore punctuation marks
+// 		// return the word starting at index 1
+// 		// plus the first character and 'ay'
+// 		return word.substr(1) + word.charAt(0) + 'ay';
+// 	});
+// 	// rejoin the separated words with spacing
+// 	return pigLatinWords.join(' ');
+// }
+
+// // TESTS
+// console.log(pigIt('Pig latin is cool'));
+// console.log(pigIt('Hello World !'));

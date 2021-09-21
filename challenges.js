@@ -524,3 +524,30 @@ Challenge Source: https://www.codewars.com/kata/554ca54ffa7d91b236000023/javascr
 // // TESTS
 // console.log(deleteNth([1, 1, 1, 1], 2));
 // console.log(deleteNth([20, 37, 20, 21], 1));
+
+/*
+Challenge Twenty-Nine: We want an array, but not just any old array, an array with contents! Write a function that produces an array with the numbers 0 to N-1 in it.
+
+Note: The parameter is optional. So you have to give it a default value.
+
+Challenge Source: https://www.codewars.com/kata/571d42206414b103dc0006a1/javascript
+
+*/
+
+// const arr = (n) => {
+// 	const newArr = [];
+
+// 	if (n == null) {
+// 		return [];
+// 	}
+// 	let x = 0;
+// 	while (x < n) {
+// 		newArr.push(x++);
+// 	}
+// 	return newArr;
+// };
+
+// // TESTS
+// console.log(arr(5));
+// console.log(arr(7));
+// console.log(arr(8));

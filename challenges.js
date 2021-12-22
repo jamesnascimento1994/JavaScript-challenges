@@ -613,4 +613,38 @@ Challenge Source: https://www.codewars.com/kata/515bb423de843ea99400000a
 //   console.log(helper.pageIndex(5)); //should == 1 (zero based index)
 //   console.log(helper.pageIndex(2)); //should == 0
 //   console.log(helper.pageIndex(20)); //should == -1
-//   console.log(helper.pageIndex(-10)); //should == -1  
+//   console.log(helper.pageIndex(-10)); //should == -1
+
+/* 
+Challenge Thirty-One: Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes?
+
+Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
+
+Challenge Source: https://www.codewars.com/kata/525c65e51bf619685c000059
+*/
+
+function cakes(recipe, available) {
+    // TODO: insert code
+    let amtOfCakes;
+    // iterate over each ingredient property in the recipe
+    for (let i in recipe) {
+    // Create a condition that checks if the ingredient is present in the available object
+      if (available[i]) {
+        // If all the required ingredients are available, we figure out how many cakes are possible to make
+        const possibleCakes = Math.floor(available[i] / recipe[i] || 0)
+        // Create another condition from within that checks if the amtOfCakes is undefined or if the possible cakes variable is less than the amtOfCakes
+        if (!amtOfCakes || possibleCakes < amtOfCakes) {
+          // If this condition is met, the possibleCakes variable gets assigned to the amtOfCakes variable
+          amtOfCakes = possibleCakes;
+        }
+      } else {
+        // if this condition is not met, return 0, because not all the required ingredients are available
+        return 0;
+      }
+    }
+    return amtOfCakes;
+  }
+
+  // TESTS
+  console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}));
+  console.log(cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000}));

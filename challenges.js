@@ -689,7 +689,7 @@ function score( dice ) {
       6: 0
     }
     // Loop through the dice parameter
-    for (let i = 0; i < dice.length; i++) {
+    for (let i in dice) {
       counts[dice[i]] += 1 
     }
     // Check for the conditions for each possible score

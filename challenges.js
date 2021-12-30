@@ -754,5 +754,5 @@ String.prototype.toJadenCase = function () {
   };
 
 // Tests
-let str = "How can mirrors be real if our eyes aren't real";
-console.log(str.toJadenCase())
+let string = "How can mirrors be real if our eyes aren't real";
+console.log(string.toJadenCase())

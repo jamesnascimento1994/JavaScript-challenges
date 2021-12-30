@@ -675,64 +675,84 @@ Challenge Source: https://www.codewars.com/kata/5270d0d18625160ada0000e4
 
 */
 
-function score( dice ) {
-    // Fill me in!
-    // Store the number of points in a varialble. Initial value = 0
-    let points = 0;
-    // Create an obj called counts with properties called 1,2,3,4,5,6. Init val = 0
-    let counts = {
-      1: 0,
-      2: 0,
-      3: 0,
-      4: 0,
-      5: 0,
-      6: 0
-    }
-    // Loop through the dice parameter
-    for (let i in dice) {
-      counts[dice[i]] += 1 
-    }
-    // Check for the conditions for each possible score
-      if (counts[6] / 3 >= 1) {
-        let newSix = counts[6] - counts[6]%3;
-        points += (newSix/3) * 600;
-      }
-    if (counts[5] > 0) {
-      if (counts[5] % 3 === 0) {
-        points += ((counts[5]/3) * 500);
-      } else if (counts[5] / 3 >= 1) {
-        let newFive = counts[5] - counts[5]%3;
-        points += ((newFive/3) * 500) + ((counts[5]%3) * 50);
-      } else {
-        points += ((counts[5]%3) * 50)
-      }
-    }
-    if (counts[4] / 3 >= 1) {
-      let newFour = counts[4] - counts[4]%3;
-      points += (newFour/3) * 400;
-    }
-    if (counts[3] / 3 >= 1) {
-      let newThree = counts[3] - counts[3]%3;
-      points += (newThree/3) * 300;
-    }
-    if (counts[2] / 3 >= 1) {
-      let newTwo = counts[2] - counts[2]%3;
-      points += (newTwo/3) * 200;
-    }
-    if (counts[1] > 0) {
-      if (counts[1] % 3 === 0) {
-        points += ((counts[1]/3) * 1000);
-      } else if (counts[1] / 3 >= 1) {
-        let newOne = counts[1] - counts[1]%3;
-        points += ((newOne/3) * 1000) + ((counts[1]%3) * 100)
-      } else {
-        points += ((counts[1]%3) * 100);
-      }
-    }
-    return points;
-  }
+// function score( dice ) {
+//     // Fill me in!
+//     // Store the number of points in a varialble. Initial value = 0
+//     let points = 0;
+//     // Create an obj called counts with properties called 1,2,3,4,5,6. Init val = 0
+//     let counts = {
+//       1: 0,
+//       2: 0,
+//       3: 0,
+//       4: 0,
+//       5: 0,
+//       6: 0
+//     }
+//     // Loop through the dice parameter
+//     for (let i in dice) {
+//       counts[dice[i]] += 1 
+//     }
+//     // Check for the conditions for each possible score
+//       if (counts[6] / 3 >= 1) {
+//         let newSix = counts[6] - counts[6]%3;
+//         points += (newSix/3) * 600;
+//       }
+//     if (counts[5] > 0) {
+//       if (counts[5] % 3 === 0) {
+//         points += ((counts[5]/3) * 500);
+//       } else if (counts[5] / 3 >= 1) {
+//         let newFive = counts[5] - counts[5]%3;
+//         points += ((newFive/3) * 500) + ((counts[5]%3) * 50);
+//       } else {
+//         points += ((counts[5]%3) * 50)
+//       }
+//     }
+//     if (counts[4] / 3 >= 1) {
+//       let newFour = counts[4] - counts[4]%3;
+//       points += (newFour/3) * 400;
+//     }
+//     if (counts[3] / 3 >= 1) {
+//       let newThree = counts[3] - counts[3]%3;
+//       points += (newThree/3) * 300;
+//     }
+//     if (counts[2] / 3 >= 1) {
+//       let newTwo = counts[2] - counts[2]%3;
+//       points += (newTwo/3) * 200;
+//     }
+//     if (counts[1] > 0) {
+//       if (counts[1] % 3 === 0) {
+//         points += ((counts[1]/3) * 1000);
+//       } else if (counts[1] / 3 >= 1) {
+//         let newOne = counts[1] - counts[1]%3;
+//         points += ((newOne/3) * 1000) + ((counts[1]%3) * 100)
+//       } else {
+//         points += ((counts[1]%3) * 100);
+//       }
+//     }
+//     return points;
+//   }
 
-  // TESTS
-  console.log(score([2, 3, 4, 6, 2]));
-  console.log(score([4, 4, 4, 3, 3]));
-  console.log(score([2, 4, 4, 5, 4]));
+//   // TESTS
+//   console.log(score([2, 3, 4, 6, 2]));
+//   console.log(score([4, 4, 4, 3, 3]));
+//   console.log(score([2, 4, 4, 5, 4]));
+
+/* 
+Challenge Thirty-Three: Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below. Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+Challenge Source: https://www.codewars.com/kata/5390bac347d09b7da40006f6
+*/
+
+String.prototype.toJadenCase = function () {
+    let newStr = "";
+    
+    this.split(" ").forEach(str => {
+      newStr += " " + str.substring(0,1).toUpperCase() + str.substring(1);
+    });
+    
+    return newStr.substring(1)
+  };
+
+// Tests
+let str = "How can mirrors be real if our eyes aren't real";
+console.log(str.toJadenCase())

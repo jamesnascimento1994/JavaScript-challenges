@@ -763,41 +763,63 @@ Challenge Thirty-Four: In this kata, you will write a function that returns the 
 Challenge Source: https://www.codewars.com/kata/5279f6fe5ab7f447890006a7
 */
 
-function pickPeaks(arr){
-  // create variable that contains the desired output to be returned
-  let output = {pos:[], peaks:[]}
-  // create a condition that checks if the arr is empty
-  if (arr.length === 0) return output;
+// function pickPeaks(arr){
+//   // create variable that contains the desired output to be returned
+//   let output = {pos:[], peaks:[]}
+//   // create a condition that checks if the arr is empty
+//   if (arr.length === 0) return output;
   
-  let topPeak = arr[0];
-  let topPos = 0;
+//   let topPeak = arr[0];
+//   let topPos = 0;
   
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > arr[i-1]) {
-      topPeak = arr[i];
-      topPos = i;
-    } else if (arr[i] == arr[i-1]) {
-      console.log("Plateau", arr[i-1], " to ", arr[i]);
-    }
-    else if (arr[i] < arr[i-1]) {
-      if (topPos > 0) {
-        output.pos.push(topPos);
-        output.peaks.push(topPeak);
-        topPos = 0;
-      }
-    }
-  }
-  return output;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > arr[i-1]) {
+//       topPeak = arr[i];
+//       topPos = i;
+//     } else if (arr[i] == arr[i-1]) {
+//       console.log("Plateau", arr[i-1], " to ", arr[i]);
+//     }
+//     else if (arr[i] < arr[i-1]) {
+//       if (topPos > 0) {
+//         output.pos.push(topPos);
+//         output.peaks.push(topPeak);
+//         topPos = 0;
+//       }
+//     }
+//   }
+//   return output;
+// }
+
+// // TESTS
+// console.log(pickPeaks([1,2,3,6,4,1,2,3,2,1]));
+// console.log(pickPeaks([3,2,3,6,4,1,2,3,2,1,2,3]));
+// console.log(pickPeaks([3,2,3,6,4,1,2,3,2,1,2,2,2,1]));
+// console.log(pickPeaks([2,1,3,1,2,2,2,2,1]));
+// console.log(pickPeaks([2,1,3,1,2,2,2,2]));
+// console.log(pickPeaks([2,1,3,2,2,2,2,5,6]));
+// console.log(pickPeaks([2,1,3,2,2,2,2,1]));
+// console.log(pickPeaks([1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3]));
+// console.log(pickPeaks([]));
+// console.log(pickPeaks([1,1,1,1]));
+
+/* 
+Challenge Thirty-Five: Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+Challenge Source: https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+*/
+
+function solution(str){
+  let arr = [];
+ 
+ if (str.length % 2 !== 0) str += '_';
+ for (let i = 0; i < str.length; i++) {
+   let letter = str[i];
+   if (i % 2 !== 0) {
+     arr.push(str[i-1] + letter)
+   }
+ }
+ return arr;
 }
 
 // TESTS
-console.log(pickPeaks([1,2,3,6,4,1,2,3,2,1]));
-console.log(pickPeaks([3,2,3,6,4,1,2,3,2,1,2,3]));
-console.log(pickPeaks([3,2,3,6,4,1,2,3,2,1,2,2,2,1]));
-console.log(pickPeaks([2,1,3,1,2,2,2,2,1]));
-console.log(pickPeaks([2,1,3,1,2,2,2,2]));
-console.log(pickPeaks([2,1,3,2,2,2,2,5,6]));
-console.log(pickPeaks([2,1,3,2,2,2,2,1]));
-console.log(pickPeaks([1,2,5,4,3,2,3,6,4,1,2,3,3,4,5,3,2,1,2,3,5,5,4,3]));
-console.log(pickPeaks([]));
-console.log(pickPeaks([1,1,1,1]));
+console.log(solution('abc'));
+console.log(solution('abcdef'));

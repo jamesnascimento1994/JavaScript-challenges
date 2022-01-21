@@ -807,19 +807,41 @@ Challenge Thirty-Five: Complete the solution so that it splits the string into p
 Challenge Source: https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
 */
 
-function solution(str){
-  let arr = [];
+// function solution(str){
+//   let arr = [];
  
- if (str.length % 2 !== 0) str += '_';
- for (let i = 0; i < str.length; i++) {
-   let letter = str[i];
-   if (i % 2 !== 0) {
-     arr.push(str[i-1] + letter)
-   }
- }
- return arr;
+//  if (str.length % 2 !== 0) str += '_';
+//  for (let i = 0; i < str.length; i++) {
+//    let letter = str[i];
+//    if (i % 2 !== 0) {
+//      arr.push(str[i-1] + letter)
+//    }
+//  }
+//  return arr;
+// }
+
+// // TESTS
+// console.log(solution('abc'));
+// console.log(solution('abcdef'));
+
+/* 
+Challenge Thirty-Six: Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+Challenge Source: https://www.codewars.com/kata/517abf86da9663f1d2000003
+*/
+
+function toCamelCase(str){
+  str = str.split('');
+  return str.map((char, i) => {
+    if (char == '-' || char == '_') {
+      char = str[i+1].toUpperCase();
+      str.splice(i+1, 1);
+    }
+    return char;
+  }).join('');
 }
 
 // TESTS
-console.log(solution('abc'));
-console.log(solution('abcdef'));
+console.log(toCamelCase(''));
+console.log(toCamelCase('the_stealth_warrior'));
+console.log("The-Stealth-Warrior");
+console.log("A-B-C");

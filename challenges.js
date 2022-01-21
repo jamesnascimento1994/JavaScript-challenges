@@ -843,5 +843,5 @@ function toCamelCase(str){
 // TESTS
 console.log(toCamelCase(''));
 console.log(toCamelCase('the_stealth_warrior'));
-console.log("The-Stealth-Warrior");
-console.log("A-B-C");
+console.log(toCamelCase("The-Stealth-Warrior"));
+console.log(toCamelCase("A-B-C"));

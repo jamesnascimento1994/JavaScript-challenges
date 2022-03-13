@@ -829,19 +829,40 @@ Challenge Thirty-Six: Complete the method/function so that it converts dash/unde
 Challenge Source: https://www.codewars.com/kata/517abf86da9663f1d2000003
 */
 
-function toCamelCase(str){
-  str = str.split('');
-  return str.map((char, i) => {
-    if (char == '-' || char == '_') {
-      char = str[i+1].toUpperCase();
-      str.splice(i+1, 1);
-    }
-    return char;
-  }).join('');
+// function toCamelCase(str){
+//   str = str.split('');
+//   return str.map((char, i) => {
+//     if (char == '-' || char == '_') {
+//       char = str[i+1].toUpperCase();
+//       str.splice(i+1, 1);
+//     }
+//     return char;
+//   }).join('');
+// }
+
+// // TESTS
+// console.log(toCamelCase(''));
+// console.log(toCamelCase('the_stealth_warrior'));
+// console.log(toCamelCase("The-Stealth-Warrior"));
+// console.log(toCamelCase("A-B-C"));
+
+/* 
+Challenge Thirty-seven: When working with color values it can sometimes be useful to extract the individual red, green, and blue (RGB) component values for a color. Implement a function that meets these requirements:
+
+Accepts a case-insensitive hexadecimal color string as its parameter (ex. "#FF9933" or "#ff9933")
+Returns a Map<String, int> with the structure {r: 255, g: 153, b: 51} where r, g, and b range from 0 through 255
+Note: your implementation does not need to support the shorthand form of hexadecimal notation (ie "#FFF")
+
+Challenge Source: https://www.codewars.com/kata/5282b48bb70058e4c4000fa7
+*/
+
+function hexStringToRGB(hexString) {
+  let rgb = [];
+  for (let i = 1; i < hexString.length - 1; i+=2) {
+    rgb.push(parseInt(hexString.substring(i, i+2), 16));
+  }
+  return {r: rgb[0], g: rgb[1], b: rgb[2]};
 }
 
 // TESTS
-console.log(toCamelCase(''));
-console.log(toCamelCase('the_stealth_warrior'));
-console.log(toCamelCase("The-Stealth-Warrior"));
-console.log(toCamelCase("A-B-C"));
+console.log(hexStringToRGB("#FF9933"));

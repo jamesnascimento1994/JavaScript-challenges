@@ -881,16 +881,39 @@ If the input or the result is an empty string it must return false.
 Challenge Source: https://www.codewars.com/kata/52449b062fb80683ec000024
 */
 
-function generateHashtag (str) {
-  if (str.trim() === "") return false;
-  let wordArr = str.split(' ')
-                    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                    .join('');
-  let hashTaggedStr = "#" + wordArr.trim();
-  return hashTaggedStr.length > 140 ? false : hashTaggedStr;
-}
+// function generateHashtag (str) {
+//   if (str.trim() === "") return false;
+//   let wordArr = str.split(' ')
+//                     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//                     .join('');
+//   let hashTaggedStr = "#" + wordArr.trim();
+//   return hashTaggedStr.length > 140 ? false : hashTaggedStr;
+// }
+
+// // TESTS
+// console.log(generateHashtag(" Hello there thanks for trying my Kata"));
+// console.log(generateHashtag("    Hello     World   "));
+// console.log(generateHashtag(""));
+
+/* 
+Challenge Thirty-nine: Complete the solution so that it strips all text that follows any of a set of comment markers passed in. Any whitespace at the end of the line should also be stripped out.
+Challenge Source: https://www.codewars.com/kata/51c8e37cee245da6b40000bd
+*/
+
+function solution(input, markers) {
+  let comments = input.split('\n');
+   for (let i in markers) {
+     for (let j in comments) {
+       let index = comments[j].indexOf(markers[i]);
+       if (index >= 0) {
+         comments[j] = comments[j].substring(0, index).trim();
+       }
+     }
+   }
+   return comments.join('\n');
+ }
 
 // TESTS
-console.log(generateHashtag(" Hello there thanks for trying my Kata"));
-console.log(generateHashtag("    Hello     World   "));
-console.log(generateHashtag(""));
+console.log(solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"]));
+console.log(solution("apples, plums % and bananas\npears\noranges !applesauce", ["%", "!"]));
+console.log(solution("Q @b\nu\ne -e f g", ["@", "-"]))

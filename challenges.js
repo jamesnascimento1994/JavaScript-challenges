@@ -900,20 +900,54 @@ Challenge Thirty-nine: Complete the solution so that it strips all text that fol
 Challenge Source: https://www.codewars.com/kata/51c8e37cee245da6b40000bd
 */
 
-function solution(input, markers) {
-  let comments = input.split('\n');
-   for (let i in markers) {
-     for (let j in comments) {
-       let index = comments[j].indexOf(markers[i]);
-       if (index >= 0) {
-         comments[j] = comments[j].substring(0, index).trim();
-       }
-     }
-   }
-   return comments.join('\n');
- }
+// function solution(input, markers) {
+//   let comments = input.split('\n');
+//    for (let i in markers) {
+//      for (let j in comments) {
+//        let index = comments[j].indexOf(markers[i]);
+//        if (index >= 0) {
+//          comments[j] = comments[j].substring(0, index).trim();
+//        }
+//      }
+//    }
+//    return comments.join('\n');
+//  }
+
+// // TESTS
+// console.log(solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"]));
+// console.log(solution("apples, plums % and bananas\npears\noranges !applesauce", ["%", "!"]));
+// console.log(solution("Q @b\nu\ne -e f g", ["@", "-"]));
+
+/* 
+Challenge Forty: In this kata, we want to convert a URL query string into a nested object. The query string will contain parameters that may or may not have embedded dots ('.'), and these dots will be used to break up the properties into the nested object.
+Challenge Source: https://www.codewars.com/kata/5286d92ec6b5a9045c000087
+*/
+
+// Converts a URL Query String into an object map
+function convertQueryToMap(query) {
+  // add your code here
+  // Create a response variable that is an empty object
+  const res = {};
+  // Create a keyValue variable that splits the query into an object
+  const keyVals = query.split("&").map(kvp => kvp.split("=")).filter(([key]) => Boolean(key));
+  
+  for (let keyVal of keyVals) {
+    const [key, val] = keyVal;
+    const path = key.split(".");
+    let acc = res;
+    for (const [i, prop] of path.entries()) {
+      if (i === path.length - 1) {
+        acc[prop] = decodeURIComponent(val);
+        continue;
+      }
+      if (!acc[prop]) {
+        acc[prop] = {};
+      }
+      acc = acc[prop];
+    }
+  }
+  return res;
+}
 
 // TESTS
-console.log(solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"]));
-console.log(solution("apples, plums % and bananas\npears\noranges !applesauce", ["%", "!"]));
-console.log(solution("Q @b\nu\ne -e f g", ["@", "-"]))
+console.log(convertQueryToMap('user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue'));

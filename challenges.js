@@ -923,31 +923,53 @@ Challenge Forty: In this kata, we want to convert a URL query string into a nest
 Challenge Source: https://www.codewars.com/kata/5286d92ec6b5a9045c000087
 */
 
-// Converts a URL Query String into an object map
-function convertQueryToMap(query) {
-  // add your code here
-  // Create a response variable that is an empty object
-  const res = {};
-  // Create a keyValue variable that splits the query into an object
-  const keyVals = query.split("&").map(kvp => kvp.split("=")).filter(([key]) => Boolean(key));
+// // Converts a URL Query String into an object map
+// function convertQueryToMap(query) {
+//   // add your code here
+//   // Create a response variable that is an empty object
+//   const res = {};
+//   // Create a keyValue variable that splits the query into an object
+//   const keyVals = query.split("&").map(kvp => kvp.split("=")).filter(([key]) => Boolean(key));
   
-  for (let keyVal of keyVals) {
-    const [key, val] = keyVal;
-    const path = key.split(".");
-    let acc = res;
-    for (const [i, prop] of path.entries()) {
-      if (i === path.length - 1) {
-        acc[prop] = decodeURIComponent(val);
-        continue;
+//   for (let keyVal of keyVals) {
+//     const [key, val] = keyVal;
+//     const path = key.split(".");
+//     let acc = res;
+//     for (const [i, prop] of path.entries()) {
+//       if (i === path.length - 1) {
+//         acc[prop] = decodeURIComponent(val);
+//         continue;
+//       }
+//       if (!acc[prop]) {
+//         acc[prop] = {};
+//       }
+//       acc = acc[prop];
+//     }
+//   }
+//   return res;
+// }
+
+// // TESTS
+// console.log(convertQueryToMap('user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue'));
+
+// Challenge Forty-One: If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0 (for languages that do have them).
+// Challenge Source: https://www.codewars.com/kata/514b92a657cdc65150000006
+
+function solution(number){
+  let sum = 0;
+  if (number <= 0) {
+    return 0;
+  } else {
+    for (let i = 1; i < number; i++) {
+      if (i % 3 == 0 || i % 5 == 0) {
+        sum += i;
       }
-      if (!acc[prop]) {
-        acc[prop] = {};
-      }
-      acc = acc[prop];
     }
   }
-  return res;
+  return sum;
 }
 
 // TESTS
-console.log(convertQueryToMap('user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=Light%20Blue'));
+console.log(solution(10));
+console.log(solution(32));
+console.log(solution(47));

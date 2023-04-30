@@ -16,15 +16,15 @@ Challenge Two: create a function that takes a number, increments it by +1, and r
 Challenge Source: https://edabit.com/challenge/NAQhEoxbofPidLxm9
 */
 
-function addition(num) {
+function additionIncrement(num) {
     num = num + 1;
     return num;
 }
 
 // TESTS
-// console.log(addition(32));
-// console.log(addition(6));
-// console.log(addition(454));
+// console.log(additionIncrement(32));
+// console.log(additionIncrement(6));
+// console.log(additionIncrement(454));
 
 /* 
 Challenge Three: Write 3 functions to calculate the bitwise AND, bitwise OR, and bitwise XOR of two numbers.
